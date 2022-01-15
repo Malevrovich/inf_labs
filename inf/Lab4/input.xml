@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<GPS_Storage
+    xmlns:xsi="http://www.w3.org/2001/XMLSchemainstance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Tracks>
+        <!--Маршруты-->
+        <Track>
+            <ID>1</ID>
+            <!--Идентификатор маршрута-->
+            <Name>На краю Земли</Name>
+            <!--Название маршрута-->
+            <LineWeight>5</LineWeight>
+            <!--Толщина линии-->
+            <LineOpacity>1</LineOpacity>
+            <!--Прозрачность линии (1 - непрозрачный, 0 - прозрачный)-->
+            <Color>#000000</Color>
+            <!--Цвет, обязательно в формате #FFFFFF-->
+            <Planned>
+                <!--Запланированный маршрут для вышестоящего-->
+                <ID>-1</ID>
+                <Name>Плановый для на краю Земли</Name>
+                <LineWeight>2</LineWeight>
+                <LineOpacity>1</LineOpacity>
+                <Color>#000000</Color>
+            </Planned>
+        </Track>
+    </Tracks>
+    <TrackPoints>
+        <!--Точки маршрутов на карте-->
+        <TrackPoint>
+            <TrackID>1</TrackID>
+            <!--Идентификатор маршрута-->
+            <Latitude>0</Latitude>
+            <!--Широта-->
+            <Longitude>0</Longitude>
+            <!--Долгота-->
+        </TrackPoint>
+        <TrackPoint>
+            <TrackID>1</TrackID>
+            <Latitude>1</Latitude>
+            <Longitude>1</Longitude>
+        </TrackPoint>
+        <TrackPoint>
+            <TrackID>-1</TrackID>
+            <Latitude>0</Latitude>
+            <Longitude>0.1</Longitude>
+        </TrackPoint>
+        <TrackPoint>
+            <TrackID>-1</TrackID>
+            <Latitude>1</Latitude>
+            <Longitude>0.9</Longitude>
+        </TrackPoint>
+    </TrackPoints>
+    <Points>
+        <!--Точки указатели на карте-->
+        <MapPoint>
+            <TrackID>1</TrackID>
+            <!--Идентификатор маршрута-->
+            <HTML_Desc>&lt;b&gt;Начало фактического маршрута&lt;/b&gt;</HTML_Desc>
+            <!--HTML для отображения-->
+            <Latitude>0</Latitude>
+            <!--Широта-->
+            <Longitude>0</Longitude>
+            <!--Долгота-->
+            <Image>http://www.google.com/favicon.ico</Image>
+            <!--Изображение-->
+            <TypeName>begin</TypeName>
+            <!--Тип точки-->
+        </MapPoint>
+        <MapPoint>
+            <TrackID>1</TrackID>
+            <HTML_Desc>&lt;b&gt;Конец фактического
+маршрута&lt;/b&gt;</HTML_Desc>
+            <Latitude>1</Latitude>
+            <Longitude>1</Longitude>
+            <Image>http://ya.ru/favicon.ico</Image>
+            <TypeName>end</TypeName>
+        </MapPoint>
+        <MapPoint>
+            <TrackID>-1</TrackID>
+            <HTML_Desc>&lt;b&gt;Начало планируемого маршрута&lt;/b&gt;</HTML_Desc>
+            <Latitude>0</Latitude>
+            <Longitude>0.1</Longitude>
+            <Image>http://www.google.com/favicon.ico</Image>
+            <TypeName>begin</TypeName>
+        </MapPoint>
+        <MapPoint>
+            <TrackID>-1</TrackID>
+            <HTML_Desc>&lt;b&gt;Конец планируемого маршрута&lt;/b&gt;</HTML_Desc>
+            <Latitude>1</Latitude>
+            <Longitude>0.9</Longitude>
+            <Image>http://ya.ru/favicon.ico</Image>
+            <TypeName>end</TypeName>
+        </MapPoint>
+    </Points>
+    <Legend>
+        <!--Легенда-->
+        <LegendEntry>
+            <Name>Начало</Name>
+            <!--Название-->
+            <Image>http://www.google.com/favicon.ico</Image>
+            <!--Изображение-->
+            <TypeName>begin</TypeName>
+            <!--Тип (см. тип точки)-->
+            <DefaultVisible>false</DefaultVisible>
+            <!--не используется-->
+        </LegendEntry>
+        <LegendEntry>
+            <Name>Конец</Name>
+            <Image>http://ya.ru/favicon.ico</Image>
+            <TypeName>end</TypeName>
+            <DefaultVisible>false</DefaultVisible>
+        </LegendEntry>
+    </Legend>
+</GPS_Storage> 

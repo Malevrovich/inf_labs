@@ -1,0 +1,17 @@
+import re
+
+inp = input()
+
+id = 335146
+
+print("INP: ", inp)
+print("RES: ", len(re.findall(r';-{\(', inp)))
+
+#TESTS
+#;-{( abs;-{(  ;-}( :+;{ ;--{(;;-{(;-{(  ::;-{()( => 5
+#;-{( => 1
+#;;--{{(( => 0
+#"" => 0
+#;:;-{()  ;-{) => 1
+#i'm sad... ;-{( i'm happy ;-{) => 1
+
